@@ -14,7 +14,7 @@ def get_shot(guesses):
 
     while True:
         try:
-            shot = input("\nTake your shot: ")
+            shot = input("\nTake your shot:\n")
             shot = int(shot)
             if shot < 0 or shot > 99:
                 print("\nMiss-fire, choose a number 0-99: ")
