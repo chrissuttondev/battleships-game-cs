@@ -3,7 +3,7 @@ import random
 print("Welcome to Battleships.")
 print("There are 5 enemy targets.")
 print("Take your shots by")
-print("choosing a number from 0-99")
+print("choosing a number from 0-24")
 
 
 def get_shot(guesses):
@@ -16,8 +16,8 @@ def get_shot(guesses):
         try:
             shot = input("\nTake your shot:\n")
             shot = int(shot)
-            if shot < 0 or shot > 99:
-                print("\nMiss-fire, choose a number 0-99: ")
+            if shot < 0 or shot > 24:
+                print("\nMiss-fire, choose a number 0-24: ")
             elif shot in guesses:
                 print("\nAlready fired there, guess again: ")
             else:
@@ -33,13 +33,13 @@ def show_board(hit, miss):
     When a user takes a it will be indicated on the board wether
     the shot was a hit (H) or a miss (M).
     """
-    print("\n        BATTLESHIPS")
-    print("\n     0 1 2 3 4 5 6 7 8 9")
+    print("\n  BATTLESHIPS")
+    print("\n     0 1 2 3 4 ")
 
     place = 0
-    for x in range(10):
+    for x in range(5):
         row = ""
-        for ch in range(10):
+        for ch in range(5):
             ch = " _"
             if place in miss:
                 ch = " M"
@@ -100,12 +100,12 @@ def run_game():
     Calls the program functions to run the game.
     """
 
-    ships = random.sample(range(0, 99), 5)
+    ships = random.sample(range(0, 24), 5)
     hit = []
     miss = []
-    target_length = 20
+    target_length = 15
 
-    for i in range(20):
+    for i in range(15):
         show_board(hit, miss)
         guesses = hit + miss
         shot = get_shot(guesses)
@@ -120,7 +120,7 @@ def run_game():
 def player_lose(turns, target_length):
     """
     Checks the length of the list stored in the turns variable.
-    If the list has reached the target lenght thee game and ends
+    If the list has reached the target lenght the game ends
     and the player loses as not all ships have been hit.
     """
     if len(turns) == target_length:
