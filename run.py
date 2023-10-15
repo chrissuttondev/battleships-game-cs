@@ -1,6 +1,7 @@
 from random import randint
 import random
-print("Welcome to Battleships")
+print("Welcome to Battleships.")
+print("There are 5 enemy targets.\nTake your shots by choosing a number from 0-99")
 
 
 def get_shot(guesses):
@@ -14,7 +15,7 @@ def get_shot(guesses):
             shot = input("\nTake your shot: ")
             shot = int(shot)
             if shot < 0 or shot > 99:
-                print("\nMiss-fire, choose number 0-99: ")
+                print("\nMiss-fire, choose a number 0-99: ")
             elif shot in guesses:
                 print("\nAlready fired there, guess again: ")
             else:
@@ -65,11 +66,12 @@ def check_shot(shot, ships, hit, miss):
     random.shuffle(hit_msgs)
 
     miss_msgs = ["Unlucky.",
-                 "Keep trying",
-                 "Better luck next time",
+                 "Keep trying.",
+                 "Better luck next time.",
                  "What are you even aiming at?",
                  "Sheesh, miles off!",
-                 "close one",
+                 "Close one",
+                 "OOOFF! Way off!",
                  "You know your supposed hit the ships?",
                  "Stop wasting ammo!"]
 
@@ -96,7 +98,6 @@ def run_game():
     """
 
     ships = random.sample(range(0, 99), 5)
-    print(ships)
     hit = []
     miss = []
     target_length = 20
