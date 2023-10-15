@@ -112,3 +112,12 @@ def run_game():
             break
         player_lose(turns, target_length)
 
+
+def player_lose(turns, target_length):
+    """
+    Checks the length of the list stored in the turns variable. 
+    If the list has reached the target lenght thee game and ends 
+    and the player loses as not all ships have been hit.
+    """
+    if len(turns) == target_length:
+        print("\nYOU LOSE! ENEMY THREAT REMAINS")
