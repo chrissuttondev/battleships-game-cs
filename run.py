@@ -121,3 +121,6 @@ def player_lose(turns, target_length):
     """
     if len(turns) == target_length:
         print("\nYOU LOSE! ENEMY THREAT REMAINS")
+
+run_game()
+print("\nGAME END")
