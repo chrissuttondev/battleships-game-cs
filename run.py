@@ -1,3 +1,8 @@
+# Code originally created by Dr. Codie and modified
+# where necessary to fit project goals.
+# highlighted using # Dr Codie start #Dr Codie end
+# https://www.youtube.com/playlist?list=PLpeS0xTwoWAsn3SwQbSsOZ26pqZ-0CG6i
+
 from random import randint
 import random
 print("Welcome to Battleships.")
@@ -11,7 +16,7 @@ def get_shot(guesses):
     Prompts user to take a shot. Coverts shot to and integer.
     Validates input and prompts again if user input not valid.
     """
-
+# Dr Codie 
     while True:
         try:
             shot = input("\nTake your shot:\n")
@@ -25,6 +30,7 @@ def get_shot(guesses):
         except ValueError:
             print("\nOoops miss-fire, try again: ")
     return shot
+# Dr Codie end
 
 
 def show_board(hit, miss):
@@ -33,6 +39,7 @@ def show_board(hit, miss):
     When a user takes a it will be indicated on the board wether
     the shot was a hit (H) or a miss (M).
     """
+    # Dr Codie start
     print("\n  BATTLESHIPS")
     print("\n     0 1 2 3 4 ")
 
@@ -49,6 +56,7 @@ def show_board(hit, miss):
             row = row + ch
             place = place + 1
         print(x, " ", row)
+    # Dr Codie end
 
 
 def check_shot(shot, ships, hit, miss):
@@ -79,11 +87,12 @@ def check_shot(shot, ships, hit, miss):
                  "Stop wasting ammo!"]
 
     random.shuffle(miss_msgs)
-
+    # Dr Codie start
     if shot in ships:
         ships.remove(shot)
         if len(ships) > -1:
             hit.append(shot)
+    # Dr Codie end
             if hit_msgs:
                 random_msg = hit_msgs.pop()
                 print(f"\nDIRECT HIT!\n{random_msg}")
@@ -101,16 +110,17 @@ def run_game():
     """
 
     ships = random.sample(range(0, 24), 5)
+# Dr Codie start
     hit = []
     miss = []
     target_length = 15
-
     for i in range(15):
         show_board(hit, miss)
         guesses = hit + miss
         shot = get_shot(guesses)
         ships, hit, miss = check_shot(shot, ships, hit, miss)
         turns = hit + miss
+# Dr Codie end    
         if not bool(ships):  # if ships list empty game end you win
             print("\nYOU WIN! ENEMY VESSELS DESTROYED")
             break
