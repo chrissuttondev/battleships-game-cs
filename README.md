@@ -112,8 +112,10 @@ Deployment Steps
 4. Selected Deploy Main Git Hub Branch.
 
 ## Credits
-Dr. Codie
+<a href="https://www.youtube.com/playlist?list=PLpeS0xTwoWAsn3SwQbSsOZ26pqZ-0CG6i"> Dr Codie</a>
+
 Dr. Codie's Battleships video series had a huge influence on this project. Where code from these tutorial videos has been used and modified is indicated in the run.py file.
+
 
 References
 1. http://www.papg.com/show?1TMC
