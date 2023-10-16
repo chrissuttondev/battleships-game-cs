@@ -2,6 +2,8 @@
 
 "Battleships Games CS" is a single-player game coded in the Python Programming Language. It runs in the Python Terminal and is hosted in the Code Institute mock terminal on Heroku.
 
+<img width="754" alt="mockup-techsini" src="https://github.com/chrissuttondev/battleships-game-cs/assets/136370848/cc04ff47-0eba-4aca-b4e3-dcc34a49f3bc">
+
 ## Game Play
 
 The app is a simplified version of the classic pencil and paper Battleships game (http://www.papg.com/show?1TMC).
@@ -14,6 +16,8 @@ The user has 15 attempts to guess where 5 hidden battleships are on a board with
 
 Five ships are randomly placed on the 5 x 5 game board, and users cannot see the ships.
 
+<img width="181" alt="board" src="https://github.com/chrissuttondev/battleships-game-cs/assets/136370848/635d003a-5ed6-4f5c-b416-3c16a1faefbb">
+
 ## User Input
 
 Users are prompted to take a shot or a guess in the range of 0-24.
@@ -23,6 +27,8 @@ When users guess the correct location of a ship, this is marked on the board wit
 If a user's guess is incorrect, then this is marked on the board with an 'M' for miss.
 
 Upon entering a guess, users are informed via the terminal whether they have achieved a hit or a miss. The terminal will display 'DIRECT HIT!' or 'YOU MISSED,' followed by a quirky comment randomly selected in the code. This is done to add a little fun and flavor to the user experience.
+
+<img width="103" alt="toast" src="https://github.com/chrissuttondev/battleships-game-cs/assets/136370848/119da3d3-11a0-435d-90a5-71ab7e010a53">
 
 If a user hits all the ships, they are informed with the message 'YOU WIN! ENEMY VESSELS DESTROYED!' and the game ends.
 
@@ -35,6 +41,8 @@ The chart below shows the steps the app takes from the start to the end of the g
 If users enter a number outside the range of 0-24 or a non-numeric character, the program will re-prompt and advise to input the correct data.
 
 If a user inputs the same guess more than once, they are alerted in the terminal and prompted to guess again.
+
+<img width="188" alt="iv" src="https://github.com/chrissuttondev/battleships-game-cs/assets/136370848/4fc008ab-b66b-4f31-845d-c5260c4294b2">
 
 ## Potential Future Features
 
@@ -64,7 +72,13 @@ The project has also been tested in the Heroku mock terminal and is running as e
 
 ### Random Number Generation
 
-A function was written to randomly generate the ships. During testing, it was discovered that this method of generating random integers does not ensure non-duplicity. If the same integer is generated more than once, this creates a bug as the user cannot take the same guess more than once and thus cannot end the game. To address this issue, the function was modified. The modified function uses a while loop, broken by an if statement that checks for a list of 5 non-duplicated integers.
+A function was written to randomly generate the ships. During testing, it was discovered that this method of generating random integers does not ensure non-duplicity. If the same integer is generated more than once, this creates a bug as the user cannot take the same guess more than once and thus cannot end the game. 
+
+<img width="210" alt="place ships1" src="https://github.com/chrissuttondev/battleships-game-cs/assets/136370848/4c64ebb8-8289-4829-a401-74eafc8002ee">
+
+To address this issue, the function was modified. The modified function uses a while loop, broken by an if statement that checks for a list of 5 non-duplicated integers.
+
+<img width="214" alt="place ships2" src="https://github.com/chrissuttondev/battleships-game-cs/assets/136370848/fc47b668-6b33-4f39-be77-1c7cfd12a63b">
 
 The above function solved the issue. However, through further development, another simpler solution was arrived at. The place ships function was removed entirely, and the built-in Python function 'random.sample()' was used. This was then placed inside the run game function.
 
@@ -73,6 +87,8 @@ The above function solved the issue. However, through further development, anoth
 During the development phase, the gameplay worked as expected, but it did not come to a smooth conclusion. If the user hit all of the ships, then the program continued to prompt the user for input until all of the turns had been taken.
 
 To overcome this issue, an if statement was added to the for loop inside the run game function. The if statement utilizes the bool method. As shown in the code, the bool method is passed the ships variable as an argument. The ships variable is a list of the randomly generated integers, the ships. As the game progresses and if a user makes correct guesses, the integers/ships are removed from the list held in the ship variable. The bool method checks to see if the list is empty. If it is, the for loop breaks, the player is alerted that they have won, and the game ends.
+
+<img width="344" alt="bool" src="https://github.com/chrissuttondev/battleships-game-cs/assets/136370848/45bdab17-8a50-418d-a46c-df7f46aee2cd">
 
 ## Development Process Git Commits Explained
 
