@@ -120,4 +120,4 @@ References
 1. http://www.papg.com/show?1TMC
 2. https://trinket.io/python/051179b6d3
 
-(Note: The text has been corrected for spelling, grammar, and punctuation, while retaining the original language structure and style.)
+
