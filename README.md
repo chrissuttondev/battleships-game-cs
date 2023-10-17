@@ -2,10 +2,9 @@
 
 "Battleships Games CS" is a single-player game coded in the Python Programming Language. It runs in the Python Terminal and is hosted in the Code Institute mock terminal on Heroku.
 
-<img width="754" alt="mockup-techsini" src="https://github.com/chrissuttondev/battleships-game-cs/assets/136370848/cc04ff47-0eba-4aca-b4e3-dcc34a49f3bc">
+<img width="754" alt="mockup-image" src="https://github.com/chrissuttondev/battleships-game-cs/assets/136370848/cc04ff47-0eba-4aca-b4e3-dcc34a49f3bc">
 
-
-<a href="https://battleships-cs-8c1e89adf8aa.herokuapp.com/">Here is the link to the deployed project</a>
+<a href="https://battleships-cs-8c1e89adf8aa.herokuapp.com/" target="blank">Here is the link to the deployed project</a>
 
 ## Game Play
 
